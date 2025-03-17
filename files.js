@@ -24,5 +24,10 @@ fs.writeFile('./docs/file2.txt', 'Xolane, Shabalala', () =>{
 */
 
 //directories
-
+fs.mkdir('./assets', (err) =>{
+    if(err){
+        console.log(err);
+    }
+    console.log("Directory created");
+});
 //deleting the file
