@@ -24,10 +24,15 @@ fs.writeFile('./docs/file2.txt', 'Xolane, Shabalala', () =>{
 */
 
 //directories
-fs.mkdir('./assets', (err) =>{
-    if(err){
-        console.log(err);
-    }
-    console.log("Directory created");
-});
+if(!fs.existsSync('./assets')){
+    fs.mkdir('./assets', (err) =>{
+        if(err){
+            console.log(err);
+        }
+        console.log("Directory created");
+    });
+}else{
+    console.log("Folder does exist");
+}
+
 //deleting the file
