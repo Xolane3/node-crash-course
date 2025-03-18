@@ -32,6 +32,7 @@ if(!fs.existsSync('./assets')){
         console.log("Folder created");
     });
 }else{
+    //Removing the folder if it does exist
     fs.rmdir('./assets', (err) => {
         if(err){
             console.log(err);
